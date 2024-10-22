@@ -10,8 +10,8 @@ const questions = [
 // Retrieve the user's progress from session storage (if any)
 let userProgress = JSON.parse(sessionStorage.getItem('progress')) || {};
 
-// Generate the quiz questions
-const questionsContainer = document.getElementById('questions-container');
+// Generate the quiz questions inside the correct div
+const questionsContainer = document.getElementById('questions'); // Changed the ID to 'questions'
 questions.forEach((q, index) => {
   const questionDiv = document.createElement('div');
   questionDiv.className = 'question';
